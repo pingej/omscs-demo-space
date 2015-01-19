@@ -120,7 +120,8 @@ for instance in data:
 from sklearn.datasets.base import Bunch
 
 sk_data = Bunch()
-sk_data['data'] = np.vstack((np.array([d[0] for d in data]), np.array([d[1] for d in data]))).T
+#sk_data['data'] = np.vstack((np.array([d[0] for d in data]), np.array([d[1] for d in data]))).T
+sk_data['data'] = data[:,:-1] # this will return the data array without the last column , looks simpler than above and saves on the transposing operation too.
 sk_data['feature_names'] = ['X', 'Y']
 sk_data['target'] = np.array(targets)
 sk_data['target_names'] = ['T1', 'T2', 'T3']
