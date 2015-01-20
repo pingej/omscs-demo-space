@@ -339,4 +339,4 @@ ax.set_ylabel('Error')
 ax.semilogy(iterations, trn_error, 'b', iterations, tst_error, 'g')
 ax.legend(['Training Error', 'Testing Error'])
 
-plt.show()
+plt.savefig("orange_demo_boosted_tree_error.png")
